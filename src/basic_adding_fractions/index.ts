@@ -20,6 +20,7 @@ function simplify(numerator: number, denominator: number): string {
   console.log(numerator, denominator);
   if (numerator === 0 && denominator === 0) return "0";
   if (denominator === 0) return `${numerator}`;
+  if (numerator === 0) return `${denominator}`;
 
   const commonDivisor = gcd(numerator, denominator);
   return `${numerator / commonDivisor}/${denominator / commonDivisor}`;

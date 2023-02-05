@@ -11,6 +11,11 @@ describe("adding fractions", () => {
 
     expect(result).toBe("3");
   });
+  test("zero + non-zero", () => {
+    const result = basicAddFractions(0, 3);
+
+    expect(result).toBe("3");
+  });
   test("non-zero + non-zero", () => {
     const result = basicAddFractions(1, 4, 1, 2);
 
