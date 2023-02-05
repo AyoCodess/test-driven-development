@@ -4,7 +4,7 @@ export function basicAddFractions(
   c?: number,
   d?: number
 ) {
-  if (!c || !d) {
+  if (!c && !d) {
     return simplify(a, b);
   }
 
@@ -17,7 +17,10 @@ export function basicAddFractions(
 }
 
 function simplify(numerator: number, denominator: number): string {
-  if (numerator === 0 || denominator === 0) return "0";
+  console.log(numerator, denominator);
+  if (numerator === 0 && denominator === 0) return "0";
+  if (denominator === 0) return `${numerator}`;
+
   const commonDivisor = gcd(numerator, denominator);
   return `${numerator / commonDivisor}/${denominator / commonDivisor}`;
 }
