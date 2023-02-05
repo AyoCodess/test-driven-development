@@ -1,20 +1,19 @@
 import { basicAddFractions } from ".";
 
 describe("adding fractions", () => {
-  test("1/4 + 1/2 = 3/4", () => {
-    const result = basicAddFractions(1, 4, 1, 2);
-
-    expect(result).toBe("3/4");
-  });
-
-  test("0 + 0 = 0", () => {
+  test("zero + zero", () => {
     const result = basicAddFractions(0, 0);
     expect(result).toBe("0");
   });
 
-  test("3 + 0 = 3", () => {
+  test("non-zero + zero", () => {
     const result = basicAddFractions(3, 0);
 
     expect(result).toBe("3");
+  });
+  test("non-zero + non-zero", () => {
+    const result = basicAddFractions(1, 4, 1, 2);
+
+    expect(result).toBe("3/4");
   });
 });
