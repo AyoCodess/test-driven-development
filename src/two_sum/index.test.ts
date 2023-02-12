@@ -22,4 +22,9 @@ describe("two sum", () => {
     const result = twoSum([5, 5], 10);
     expect(result).toEqual([0, 1]);
   });
+
+  test("get indices of elements that add up to target", () => {
+    const result = twoSum([5, 3, 7, 8, 3, 1, 8, 9, 7, 3, 4, 5, 7, 5], 11);
+    expect(result).toEqual([1, 3]);
+  });
 });
