@@ -1,3 +1,2 @@
-## Test Driven Development Practice
+## Test Driven Development
 
-It's in the title...
